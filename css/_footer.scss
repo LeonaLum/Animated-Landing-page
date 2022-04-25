@@ -1,0 +1,11 @@
+.footer{
+  @include flexBox(column, flex-start, center);
+  background-color: $color-black;
+  padding: 60px 0px;
+  width: 100%;
+  .footer-content{
+    font-size: 20px;
+    color: $color-lightgrey;
+    margin-left:90px;
+  }
+}

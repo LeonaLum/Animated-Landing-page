@@ -1,0 +1,13 @@
+//Mixins
+@mixin flexBox($direction, $align, $content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $content;
+}
+@mixin upperCase{
+  text-transform: uppercase;
+}
+@mixin hoverBorder{
+  border-bottom: solid $color-orange 1px;
+}

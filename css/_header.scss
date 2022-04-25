@@ -1,0 +1,93 @@
+.header{
+  @include flexBox(column, center, space-around);
+  background-color: $color-lightergrey;
+  padding:60px 0px 0px 0px;
+  .top-heading{
+    margin-bottom: 60px;
+    background-color: $color-white;
+    padding: 90px 520px;
+    font-weight: 300;
+    color: $color-darkgrey;
+  }
+  .navbar{
+    @include flexBox(row, center, space-around);
+    height: 100px;
+    width: 100%;
+    .logo-section{
+      @include flexBox(row, center, flex-start);
+      flex:0.9;
+      background-color: $color-darkgrey;
+      height: 100%;
+      padding-left:100px;
+      .logo{
+        background-image: url(../images/logo.svg);
+        background-size: 200px 200px;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 350px;
+      }
+    }
+    .nav-list{
+      @include flexBox(row, center, center);
+      background-color: $color-darkgrey;
+      height: 100%;
+      flex:1;
+      .nav-item{
+        @include flexBox(row, center, space-around);
+        height: 100%;
+        margin-left: 40px;
+        font-size: 22px;
+        text-transform: uppercase;
+        a{
+          @include flexBox(row, center, space-around);
+          color: $color-lightgrey;
+          height: 70%;
+          width: 100%;
+          border-bottom: solid rgba(0, 0, 0, 0) 1px;
+          transition: 0.5s all ease-in-out;
+          &:hover{
+            color: $color-white;
+            @include hoverBorder;
+          }
+        }
+      }
+    }
+  }
+  .hero{
+    position:relative;
+    height: 900px;
+    width: 100%;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: right;
+    .hero-text{
+      @include flexBox(column, flex-start, center);
+      position:absolute;
+      margin-left:150px;
+      height: 100%;
+      width: 400px;
+      h2{
+        color: white;
+        font-size: 90px;
+      }
+      p{
+        @include upperCase;
+        font-size: 20px;
+        color: $color-lightgrey;
+      }
+      a{
+        @include upperCase;
+        font-size: 23px;
+        height: 30px;
+        margin-top:60px;
+        color: $color-lightgrey;
+        transition: 0.5s all ease-in-out;
+        border-bottom: solid rgba(255, 127, 80, 0) 1px;
+        &:hover{
+          color: $color-orange;
+          @include hoverBorder;
+        }
+      }
+    }
+  }
+}

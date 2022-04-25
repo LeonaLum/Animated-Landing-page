@@ -1,0 +1,108 @@
+.main-content{
+  @include flexBox(column, center, space-evenly);
+  .article-container{
+    @include flexBox(row, center, space-evenly);
+    @media only screen and (max-width: 1300px){
+      flex-direction:column;
+    }
+    width: 100%;
+    padding:150px;
+    background-color: $color-darkgrey;
+    .article-text{
+      @include flexBox(column, flex-start, center);
+      height: 500px;
+      width: 550px;
+      line-height: 30px;
+     h3{
+        color: $color-white;
+        font-size: 35px;
+      }
+      .underline{
+        margin-top: 35px;
+        border-bottom: 2px $color-orange solid;
+        width: 70px;
+      }
+      h4{
+        margin-top: 30px;
+        color: $color-lightgrey;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom:30px;
+      }
+      p{
+        color: $color-lightgrey;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+    }
+  .article-image-container{
+    @include flexBox(column, center, space-around);
+    .article-image{
+      border-radius: 10px;
+      height: 650px;
+      width: 650px;
+      background-image: url(../images/leopard.jpg);
+      background-position: 80% 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+ }
+  .services-container{
+    width: 100%;
+    background-color: $color-darkgrey;
+    .services-header{
+      @include flexBox(column, center, center);
+      color: $color-white;
+      width: 100%;
+      height: 200px;
+      h2{
+        font-size: 35px;
+        color: $color-white;
+      }
+      .underline{
+        height: 30px;
+        width: 70px;
+        border-bottom: $color-orange solid 2px;
+      }
+      h3{
+        margin-top: 30px;
+        line-height: 1.4em;
+        font-size: 23px;
+        font-weight: 400;
+        text-align: center;
+        width: 500px;
+        color: $color-lightgrey;
+      }
+    }
+    .services-body{
+      @media only screen and (max-width: 1300px){
+        flex-direction:column;
+      }
+      @include flexBox(row, center, space-around);
+      text-align: center;
+      padding: 90px;
+      width: 100%;
+      .service{
+        @media only screen and (max-width: 1300px){
+          margin-top: 90px;
+        }
+        @include flexBox(column, center, center);
+        flex: 1;
+        height: 100%;
+        max-width: 350px;
+        h4{
+          margin-bottom: 25px;
+          font-size: 35px;
+          color: $color-white;
+        }
+        p{
+          font-size: 1.3em;
+          line-height: 1.6em;
+          color: $color-lightgrey;
+        }
+      }
+    }
+  }
+}
